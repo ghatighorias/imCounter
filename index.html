@@ -13,13 +13,14 @@
     <script>
       $("#testResizableArray").sevenSegArray({ digits: 3, value: 1 });
       $(function() {
-        var iArrayValue = 0;
+        var sec = 1000;
+        var iArrayValue = 2;
         setInterval(function() {
           $("#testResizableArray").sevenSegArray({ value: iArrayValue });
           if (++iArrayValue > 999) {
             iArrayValue = 0;
           }
-        }, 6000);
+        }, 60 * sec);
       });
     </script>
   </body>
