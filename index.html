@@ -11,12 +11,12 @@
   <body>
     <div id="testResizableArray"></div>
     <script>
-      $("#testResizableArray").sevenSegArray({ digits: 3, value: 1 });
+      $("#testResizableArray").sevenSegArray({ digits: 3, value: 1, segmentOptions:{colorBackground: "black"} });
       $(function() {
         var sec = 1000;
         var iArrayValue = 2;
         setInterval(function() {
-          $("#testResizableArray").sevenSegArray({ value: iArrayValue });
+          $("#testResizableArray").sevenSegArray({ digits: 3, value: iArrayValue });
           if (++iArrayValue > 999) {
             iArrayValue = 0;
           }
