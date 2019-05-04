@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js"></script>
+    <script src="https://www.jqueryscript.net/demo/jQuery-jQuery-UI-Plugin-For-Seven-Segment-Indicator-sevenSeg-js/sevenSeg.js"></script>
+
+    <base target="_top" />
   </head>
   <body>
-    hello
+    <div id="testResizableArray"></div>
+    <script>
+      $("#testResizableArray").sevenSegArray({ digits: 3, value: 1 });
+      $(function() {
+        var iArrayValue = 0;
+        setInterval(function() {
+          $("#testResizableArray").sevenSegArray({ value: iArrayValue });
+          if (++iArrayValue > 999) {
+            iArrayValue = 0;
+          }
+        }, 6000);
+      });
+    </script>
   </body>
 </html>
-
-
